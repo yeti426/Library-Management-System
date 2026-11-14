@@ -1,6 +1,7 @@
 // main.cpp —— 程序入口：只负责启动与主循环调度
 #include <iostream>
 #include <string>
+#include <windows.h>
 #include "Library.h"
 #include "src/ui/UI.h"
 #include "src/utils/InputUtils.h"
@@ -9,6 +10,7 @@ using namespace std;
 using namespace UI;
 
 int main() {
+	SetConsoleOutputCP(65001);
     Library lib;
     lib.loadFromFile();   // 启动时从 books.txt 加载数据
 
